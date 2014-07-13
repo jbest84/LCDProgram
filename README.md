@@ -1,4 +1,6 @@
 LCDProgram
 ==========
 
-LCD library written for use with two 8-bit shift registers.
+Example program using the LCDShifter library.
+
+https://github.com/jbest84/LCDShifter
