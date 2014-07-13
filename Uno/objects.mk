@@ -4,5 +4,5 @@
 
 USER_OBJS :=
 
-LIBS := -lArduinoCore -lm
+LIBS := -lArduinoCore -lm -lLCDShifter
 

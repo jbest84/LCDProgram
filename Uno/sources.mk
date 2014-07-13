@@ -31,4 +31,7 @@ CPP_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 src \
+lib/MLX90614 \
+arduinolib/Wire/utility \
+arduinolib/Wire \
 

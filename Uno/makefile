@@ -9,6 +9,9 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include src/subdir.mk
+-include lib/MLX90614/subdir.mk
+-include arduinolib/Wire/utility/subdir.mk
+-include arduinolib/Wire/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -62,7 +65,7 @@ all: LCDProgram.elf secondary-outputs
 LCDProgram.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C++ Linker'
-	avr-g++ -Wl,-Map,LCDProgram.map,--cref -mrelax -Wl,--gc-sections -L"C:\Users\Jason\workspace\ArduinoCore\Uno" -mmcu=atmega328p -o "LCDProgram.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	avr-g++ -Wl,-Map,LCDProgram.map,--cref -mrelax -Wl,--gc-sections -L"C:\Users\Jason\workspace\ArduinoCore\Uno" -L"C:\Users\Jason\workspace\LCDShifter\Uno" -mmcu=atmega328p -o "LCDProgram.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
